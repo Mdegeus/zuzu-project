@@ -1,0 +1,14 @@
+RewriteEngine on
+
+RewriteRule ^home/([0-9]+)/?$ /public/index.php?   [NC,L]    # Handle category requests
+RewriteRule ^action/([0-9]+)/?$ /public/index.php?id=$1    [NC,L]    # Handle category requests
+
+# Rewrite all the default paths to public e.g. /css/style.css -> /public/css/style.css
+RewriteCond %{REQUEST_URI} !/public
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Rewrite all the files to index.php /random -> /public/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /public/index.php [NC,L,QSA]
+
+

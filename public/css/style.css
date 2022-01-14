@@ -1,0 +1,257 @@
+/* #region defaults*/
+
+* {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+:root {
+    --color-base: rgb(255, 136, 0);
+    --color-base-select: rgb(42, 170, 255);
+}
+
+form {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+/* #endregion */
+
+.nav-title > a {
+    color: var(--color-base);
+}
+
+.top-logo {
+    display: block;
+    width: 20%;
+    height: auto;
+    margin: .5em auto .5em auto;
+    transition: all .5s
+}
+
+.top-logo:hover {
+    transform: scale(1.1);
+    margin-top: 2em;
+}
+
+.products-container {
+    padding: 2em;
+}
+
+.product-div {
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    border: solid;
+    border-width: 1.5px 0 0 0;
+    border-color: gray;
+}
+
+.product-div p {
+    transition: all .5s;
+}
+
+.product-div:hover p.animate-color {
+    color: var(--color-base);
+}
+
+.product-div > .component {
+    transition: all .5s;
+}
+
+.product-div:hover > .component {
+    padding-left: 1.5em;
+}
+
+.product-div:hover > .product-image {
+    transform: scale(1.11);
+}
+
+.product-div > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info {
+    color: gray;
+    height: auto;
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-image {
+    width: 100%;
+    min-width: 80px;
+    max-width: 200px;
+    height: 100%;
+    max-height: 200px;
+    margin-right: 3em;
+    transition: all .5s;
+}
+
+a.button {
+    background-color: rgb(0, 255, 76);
+    padding: 0.15em .8em;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: .2em;
+    width: fit-content;
+}
+
+button.button {
+    background-color: rgb(0, 255, 76);
+    padding: 0.15em .8em;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: .2em;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    transition: all .5s;
+}
+
+button.button.disabled {
+    background-color: rgb(255, 60, 0);
+    padding: 0.15em .8em;
+    transition: all .5s;
+}
+
+a.button.disabled {
+    background-color: rgb(255, 60, 0);
+    padding: 0.15em .8em;
+}
+
+.product-title {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.product-price {
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.product-price.shoppingcart-list-item {
+    color: var(--color-base);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0 .5em 0 auto;
+    font-weight: bold;
+}
+.product-shoppingcart.shoppingcart-list-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 2em;
+    padding: .2em 1em;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(170, 170, 170);
+    margin-top: 2px;
+}
+
+.new-order.shoppingcart-list-item{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 2em;
+    padding: .2em 1em;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(170, 170, 170);
+    margin-top: 2px;
+}
+
+.new-order.shoppingcart-list-item > p {
+    color:var(--color-base);
+    font-weight: bold;
+}
+
+.order-button {
+    background-color: var(--color-base);
+    padding: 0.4em 1em;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+    border-radius: .2em;
+    width: fit-content;
+    border: none;
+    transition: all .5s;
+}
+
+.order-button:hover {
+    background-color: var(--color-base-select);
+    transform: scale(1.05);
+}
+
+
+.top-right {
+    margin: 0 0 auto auto;
+}
+
+.bottom-right {
+    margin: 0 0 0 auto;
+}
+
+.center-right {
+    margin: auto 0 auto auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.messageBox-parent {
+    padding: 0 1em;
+    margin: 0 0 1em 0;
+}
+
+.messageBox {
+    background-color: rgb(255, 56, 56);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: .5em;
+    border-color: rgb(82, 82, 82);
+    padding: .7em 1em;
+    text-align: center;
+}
+
+.messageBox.wrong {
+    background-color: rgb(255, 56, 56);
+}
+
+.messageBox.succes {
+    background-color: rgb(56, 255, 89);
+}
+
+.messageBox > p {
+    color: white;
+    margin: 0;
+    font-weight: bold;
+    font-family: 'Mountains of Christmas', cursive;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.form-control {
+    margin: .5em 0;
+}
